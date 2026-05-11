@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MoodMirror AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>MoodMirror AI ✨</h1>
+
+    <p class="welcome">
+      Your AI-powered emotional journal 💫
+    </p>
+
+    <p class="subtitle">
+      Tell me how you feel today...
+    </p>
+
+    <textarea
+      id="moodInput"
+      placeholder="Write your feelings here..."
+    ></textarea>
+
+    <button id="analyzeBtn">
+      Analyze Mood
+    </button>
+
+    <div class="result-box">
+
+      <h2 id="moodResult">
+        Your mood will appear here
+      </h2>
+
+      <p id="quoteResult"></p>
+
+    </div>
+
+    <div class="history-box">
+
+      <h3>Recent Moods 📝</h3>
+
+      <ul id="historyList"></ul>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
