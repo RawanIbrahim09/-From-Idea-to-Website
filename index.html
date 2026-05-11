@@ -1,60 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MoodMirror AI</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>MoodMuse</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-  <div class="container">
 
-    <h1>MoodMirror AI ✨</h1>
 
-    <p class="welcome">
-      Your AI-powered emotional journal 💫
-    </p>
+  <!-- OPENING SCREEN -->
 
-    <p class="subtitle">
-      Tell me how you feel today...
-    </p>
+  <div class="login-screen" id="loginScreen">
 
-    <textarea
-      id="moodInput"
-      placeholder="Write your feelings here..."
-    ></textarea>
+    <div class="book-container">
 
-    <button id="analyzeBtn">
-      Analyze Mood
-    </button>
+      <div class="book">
+        📖
+      </div>
 
-    <div class="result-box">
+      <h1>MoodMuse</h1>
 
-      <h2 id="moodResult">
-        Your mood will appear here
-      </h2>
+      <p>
+        A quiet place for your thoughts
+      </p>
 
-      <p id="quoteResult"></p>
+      <input
+        type="text"
+        id="username"
+        placeholder="Your name"
+      >
+
+      <button id="startBtn">
+        Open Your Journal
+      </button>
 
     </div>
 
+  </div>
+
+
+
+  <!-- MAIN APP -->
+
+  <div class="container" id="mainApp">
+
+    <h1 id="welcomeText">
+      Welcome ✨
+    </h1>
+
+    <p class="affirmation">
+      “You are allowed to grow slowly.”
+    </p>
+
+    <p id="date"></p>
+
+
+
+    <!-- MOOD CARDS -->
+
+    <div class="mood-section">
+
+      <h3>How are you feeling today?</h3>
+
+      <div class="mood-cards">
+
+        <div class="mood-card" data-mood="happy">
+          😊
+          <span>Happy</span>
+        </div>
+
+        <div class="mood-card" data-mood="sad">
+          🌧️
+          <span>Sad</span>
+        </div>
+
+        <div class="mood-card" data-mood="stressed">
+          🌿
+          <span>Stressed</span>
+        </div>
+
+        <div class="mood-card" data-mood="calm">
+          🌙
+          <span>Calm</span>
+        </div>
+
+        <div class="mood-card" data-mood="angry">
+          🔥
+          <span>Angry</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- JOURNAL -->
+
+    <textarea
+      id="journalInput"
+      placeholder="Write about your day..."
+    ></textarea>
+
+
+
+    <button id="saveBtn">
+      Save Today's Entry
+    </button>
+
+
+
+    <!-- REFLECTION -->
+
+    <div class="result-box">
+
+      <h2 class="reflection-title">
+        Reflection ✨
+      </h2>
+
+      <h2 id="moodResult">
+        Your reflection will appear here
+      </h2>
+
+      <div class="advice-box">
+
+        <h3>Gentle Reminder 🌿</h3>
+
+        <ul id="adviceList"></ul>
+
+      </div>
+
+      <div class="quote-box">
+
+        <h3>Today's Quote 🎬</h3>
+
+        <p id="quoteResult"></p>
+
+        <span id="quoteSource"></span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- TODO -->
+
+    <div class="todo-section">
+
+      <h3>Today's Goals 🎯</h3>
+
+      <div class="todo-input">
+
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Add a task"
+        >
+
+        <button id="addTodoBtn">
+          Add
+        </button>
+
+      </div>
+
+      <ul id="todoList"></ul>
+
+    </div>
+
+
+
+    <!-- HISTORY -->
+
     <div class="history-box">
 
-      <h3>Recent Moods 📝</h3>
+      <h3>Journal Entries 📝</h3>
 
       <ul id="historyList"></ul>
 
     </div>
 
   </div>
+
+
 
   <script src="script.js"></script>
 
